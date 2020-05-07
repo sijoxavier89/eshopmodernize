@@ -38,13 +38,14 @@ namespace eShopLegacyMVC.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
            // CatalogItem catalogItem = service.FindCatalogItem(id.Value);
+           // Fetching catalog details from web api
             CatalogItem catalogItem = apiservice.FindCatalogItem(id.Value);
             if (catalogItem == null)
             {
                 return HttpNotFound();
             }
 
-           // var details = apiservice.FindCatalogItem(id);
+    
             AddUriPlaceHolder(catalogItem);
 
             return View(catalogItem);

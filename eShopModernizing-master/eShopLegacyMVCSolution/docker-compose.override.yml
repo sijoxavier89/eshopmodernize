@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  eshoplegacymvc:
+    ports:
+      - "80"
+  eshopwebapi:
+    ports:
+      - "80"
+networks:
+  default:
+    external:
+      name: nat
+

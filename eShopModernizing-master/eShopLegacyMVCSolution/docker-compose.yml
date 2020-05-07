@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  eshoplegacymvc:
+    image: ${DOCKER_REGISTRY-}eshoplegacymvc
+    build:
+      context: .\src\eShopLegacyMVC
+      dockerfile: Dockerfile
+
+  eshopwebapi:
+    image: ${DOCKER_REGISTRY-}eshopwebapi
+    build:
+      context: .\eShopWebAPI
+      dockerfile: Dockerfile
+
